@@ -1,0 +1,53 @@
+.landing-section{
+  min-height: 100vh;            /* Full viewport height */
+  width: 100%;                  /* Full viewport width */
+  display: flex;                /* Flexbox layout */
+  justify-content: center;      /* Horizontal centering */
+  align-items: center;          /* Vertical centering */
+  margin: 0;                    /* Remove default margins */
+  padding: 0;                   /* Remove default padding */
+  background: radial-gradient(80vw 60vh at 70% -10%, #f3f4f6, #fff);
+
+  }
+  .record-button{ position:relative; appearance:none; background:none; border:none; cursor:pointer; }
+  .record-size{ width:min(22rem,86vw); }
+  
+  .record-label{
+    position:absolute; inset:30% 30%;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    border-radius:9999px; background:rgba(255,255,255,.85);
+    backdrop-filter:saturate(1.1) blur(2px); border:1px solid rgba(0,0,0,.06);
+  }
+  .record-welcome{ font-size:1.05rem; letter-spacing:.28em; text-transform:uppercase; color:var(--ink-2); }
+  .record-sub{ margin-top:.25rem; font-size:.85rem; color:var(--muted); }
+  .record-pulse{
+    position:absolute; inset:-6px; border-radius:9999px; border:1px solid rgba(0,0,0,.12);
+    animation:pulse 2.2s ease-out infinite;
+  }
+  @keyframes pulse{
+    0%{ transform:scale(.96); opacity:.9 }
+    70%{ transform:scale(1.08); opacity:.25 }
+    100%{ transform:scale(1.12); opacity:0 }
+  }
+  .record-button:focus-visible .record-label{ outline:2px solid #000; outline-offset:2px; }
+  
+  /* Ensure landing fills the screen and centers content */
+.landing-section {
+  position: relative;       /* make it its own positioning context */
+  flex: 1 0 auto;           /* allow it to expand fully in flex parents */
+  min-height: 100vh;        /* full height */
+  width: 100vw;             /* full width even if a parent has a grid column */
+  max-width: none;          /* kill any inherited max-width */
+}
+
+/* Button and inner record centered */
+.record-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Just in case a parent imposed grid columns earlier */
+.landing-section, .app-container {
+  grid-column: 1 / -1;      /* span all columns if inside any grid */
+}

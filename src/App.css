@@ -1,0 +1,25 @@
+:root{
+  --bg:#ffffff; --ink:#121212; --ink-2:#2b2b2b; --muted:#5b5b5b; --card:#f6f6f7; --ring:rgba(0,0,0,.12);
+}
+*{ box-sizing: border-box; }
+html, body, #root{ height:100%; }
+body{ margin:0; }
+#root, .app-container{
+  min-height:100vh; background:var(--bg); color:var(--ink);
+  font-family: 'Playfair Display', ui-serif, Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Full-bleed + reset */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;            /* remove default 8px margin */
+}
+.app-container {
+  min-height: 100vh;
+  width: 100vw;         /* full viewport width */
+  display: block;       /* ensure no leftover grid from old styles */
+  max-width: none;
+}
