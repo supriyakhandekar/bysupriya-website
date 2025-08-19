@@ -32,7 +32,7 @@ function Main() {
   return (
     <div className="main-container">
       <header className="main-header ">
-      <img src="../public/assets/profile.png" alt="Supriya Khandekar" className="profile-pic" />
+      <img src="assets/profile.png" alt="Supriya Khandekar" className="profile-pic" />
         <div>
           <h1 className="tagline">I build beautiful, impactful product experiences.</h1>
           <p className="bio">Engineering leader and creative technologist with expertise in building AI centric applications, web experiences for internal tooling and external tools for financial analytics. Passionate about blending engineering excellence, product vision, and art to deliver meaningful, user‑centered solutions.</p>
